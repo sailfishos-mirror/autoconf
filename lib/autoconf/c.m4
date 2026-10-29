@@ -1751,6 +1751,7 @@ do
   CC="$ac_save_CC $ac_arg"
   _AC_COMPILE_IFELSE([], [ac_cv_prog_cc_c$1=$ac_arg])
   test "x$ac_cv_prog_cc_c$1" != "xno" && break
+  AS_CASE([" $ac_save_CC $CFLAGS"], [[*[[:space:]]-std[:=]*]], [break])
 done
 rm -f conftest.$ac_ext
 CC=$ac_save_CC])
